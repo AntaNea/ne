@@ -1,0 +1,10 @@
+syntax = "proto3";
+option csharp_namespace = "new_tcp";
+//import "google/protobuf/timestamp.proto"; не рабоает даже с C:/protoc/include/, потому будет строкой.
+
+message SendingMessage{
+	
+	string sending_time = 1;
+	string mess = 2;
+	string user_name = 3;
+}
