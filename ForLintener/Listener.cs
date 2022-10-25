@@ -29,7 +29,7 @@ namespace new_tcp
                     Console.WriteLine("What are you need?");
                     mess = new SendingMessage {Mess = Console.ReadLine(), UserName = ip_server, SendingTime = DateTime.Now.ToString() };
                     str.Write(mess.ToByteArray(), 0, mess.CalculateSize());
-                    str.Close();
+                    str.Close(); Client.Close();
                 }
             }
             catch (SocketException e)
